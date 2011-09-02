@@ -1,0 +1,2 @@
+https://github.com/guidog/pyzmq-mdp/tarball/master
+pyzmq-static

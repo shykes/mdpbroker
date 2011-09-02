@@ -1,0 +1,5 @@
+broker:
+    type: python-worker
+    process: mdpbroker tcp://127.0.0.1:4242
+    ports:
+        broker: tcp
