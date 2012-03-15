@@ -1,2 +1,5 @@
-https://github.com/guidog/pyzmq-mdp/tarball/master
+gevent
+./pyzmq-mdp
+msgpack-python
 pyzmq-static
+gevent-zeromq

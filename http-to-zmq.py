@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """WSGI server example"""
 
@@ -42,6 +42,6 @@ if __name__ == '__main__':
     s.connect(zmq_addr)
     print 'Serving on {0}...'.format(http_port)
     WSGIServer(
-        ('', 8088),
+        ('', int(http_port)),
         lambda *args, **kw: application(zmq_socket=s, *args, **kw)
     ).serve_forever()

@@ -1,5 +1,9 @@
-broker:
-    type: python-worker
-    process: mdpbroker tcp://127.0.0.1:4242
+mdpbroker:
+    type: custom
+    buildscript: builder
+    processes:
+        broker: ./mdpbroker tcp://127.0.0.1:4242
+        gateway: ./http-to-zmq.py 8080 tcp://127.0.0.1:4242
+        test: pwd > /tmp/pwd
     ports:
-        broker: tcp
+        gateway: http
